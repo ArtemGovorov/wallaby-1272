@@ -5,17 +5,17 @@ module.exports = function (wallaby) {
     ],
 
     tests: [
-      'test/**/*.spec.js'
+      'a.spec.js'
     ],
-    //
-    // compilers: {
-    //   '**/*.js': wallaby.compilers.babel({
-    //     babel: require("babel-core"),
-    //     plugins: [
-    //       require("babel-plugin-transform-flow-strip-types")
-    //     ]
-    //   })
-    // },
+
+    compilers: {
+      '**/*.js': wallaby.compilers.babel({
+        babel: require("babel-core"),
+        plugins: [
+          require("babel-plugin-transform-flow-strip-types")
+        ]
+      })
+    },
 
     env: {
       type: 'node'
